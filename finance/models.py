@@ -28,3 +28,15 @@ class Calendar(BaseModel):
 
 class InterestRate(BaseModel):
     pass
+
+
+class BusinessEntity(BaseModel):
+    pass
+
+
+class Instrument(BaseModel):
+    pass
+
+
+class Security(BaseModel):
+    pass
