@@ -13,7 +13,7 @@ class BaseModel(models.Model):
 
 
 class Currency(BaseModel):
-    name = models.CharField(max_length=10)
+    name = models.CharField(max_length=10, unique=True)
     full_name = models.CharField(max_length=50)
     display_format = models.CharField(max_length=50)
     flag = models.CharField(max_length=10)
