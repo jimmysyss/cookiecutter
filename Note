@@ -1,0 +1,6 @@
+for i, v in enumerate(CurrencyHelper._CURRENCY_DATA):
+    ...:     print(i, CurrencyHelper._CURRENCY_DATA[v])
+    ...:     ccy = models.Currency(name=str(v).replace('Currency.', ''), full_n
+    ...: ame=CurrencyHelper._CURRENCY_DATA[v]['display_name'][:50], display_for
+    ...: mat="", flag="")
+    ...:     ccy.save()

@@ -24,6 +24,7 @@ class Currency(BaseModel):
     class Meta:
         verbose_name_plural = "currencies"
 
+
 class CurrencyPair(BaseModel):
     pass
 
