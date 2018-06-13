@@ -26,6 +26,10 @@ class Currency(BaseModel):
 
 
 class CurrencyPair(BaseModel):
+    name = models.CharField(max_length=10, unique=True)
+    display_format = models.CharField(max_length=50)
+    base_ccy = models.CharField(max_length=10)
+    alt_ccy = models.CharField(max_length=10)
     pass
 
 
