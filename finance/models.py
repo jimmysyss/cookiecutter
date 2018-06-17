@@ -1,3 +1,4 @@
+from django.contrib.postgres.fields import ArrayField, JSONField, IntegerRangeField
 from django.db import models
 
 
@@ -55,3 +56,13 @@ class Instrument(BaseModel):
 
 class Security(BaseModel):
     pass
+
+
+class HelloWorldEntity(BaseModel):
+    name = models.CharField(max_length=10, unique=True)
+    array_field = ArrayField(models.CharField(max_length=10), size=8, null=True)
+    json_field = JSONField(null=True)
+    integer_range_field = IntegerRangeField(null=True)
+
+    def __str__(self):
+        return self.name
